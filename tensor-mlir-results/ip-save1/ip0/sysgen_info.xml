@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AdditionalInfo>
+  <CTypeInfo>
+      <RtlPort>
+        <name>hidden_fp32_to_chip1_TDATA</name>
+        <type>Floating-point</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>hidden_fp32_to_chip1_TREADY</name>
+        <type>Floating-point</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>hidden_fp32_to_chip1_TVALID</name>
+        <type>Floating-point</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>hidden_orig_to_chip1_TDATA</name>
+        <type>Floating-point</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>hidden_orig_to_chip1_TREADY</name>
+        <type>Floating-point</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>hidden_orig_to_chip1_TVALID</name>
+        <type>Floating-point</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+  </CTypeInfo>
+  <DesignConstraint>
+    <clk_period>10</clk_period>
+  </DesignConstraint>
+  <Machine>64</Machine>
+  <modelParameters>
+    <combinational>0</combinational>
+    <latency>3205483</latency>
+    <II>3205484</II>
+  </modelParameters>
+</AdditionalInfo>

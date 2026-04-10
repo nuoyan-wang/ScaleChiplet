@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AdditionalInfo>
+  <CTypeInfo>
+      <RtlPort>
+        <name>mlp_from_chip1_TDATA</name>
+        <type>Floating-point</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>mlp_from_chip1_TREADY</name>
+        <type>Floating-point</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>mlp_from_chip1_TVALID</name>
+        <type>Floating-point</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>residual_from_chip1_TDATA</name>
+        <type>Floating-point</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>residual_from_chip1_TREADY</name>
+        <type>Floating-point</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>residual_from_chip1_TVALID</name>
+        <type>Floating-point</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+  </CTypeInfo>
+  <DesignConstraint>
+    <clk_period>10</clk_period>
+  </DesignConstraint>
+  <Machine>64</Machine>
+  <modelParameters>
+    <combinational>0</combinational>
+    <latency>2463996</latency>
+    <II>2463997</II>
+  </modelParameters>
+</AdditionalInfo>

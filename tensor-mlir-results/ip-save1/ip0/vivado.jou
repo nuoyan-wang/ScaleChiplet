@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Apr  9 19:54:27 2026
+# Process ID         : 309407
+# Current directory  : /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/chip0_kernel/p/s/impl/ip
+# Command line       : vivado -notrace -mode batch -source run_ippack.tcl
+# Log file           : /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/chip0_kernel/p/s/impl/ip/vivado.log
+# Journal file       : /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/chip0_kernel/p/s/impl/ip/vivado.jou
+# Running On         : Nu-SER8
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : AMD Ryzen 7 8745HS w/ Radeon 780M Graphics
+# CPU Frequency      : 3792.896 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 14541 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 18836 MB
+# Available Virtual  : 13610 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
