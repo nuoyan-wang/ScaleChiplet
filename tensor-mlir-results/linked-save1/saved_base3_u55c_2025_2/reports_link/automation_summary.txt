@@ -1,0 +1,21 @@
+====================================================================
+Version:    xcd v2025.2 (64-bit)
+Copyright:  Copyright 1986-2025 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Apr 10 03:25:26 2026
+====================================================================
+
+1. Kernel and compute unit information
+======================================
+
+2. Interface Connections
+========================
+
+3. Clock Connections
+====================
+
+4. Reset Connections
+====================
+
+5. Clock Summary
+================
+

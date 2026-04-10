@@ -1,0 +1,281 @@
+
+*** Running vivado
+    with args -log bd_85ad_slice6_5_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_85ad_slice6_5_0.tcl
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Apr 10 01:46:30 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source bd_85ad_slice6_5_0.tcl -notrace
+INFO: Dispatch client connection id - 39599
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/int/xo/ip_repo/xilinx_com_hls_b3c2_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/int/xo/ip_repo/xilinx_com_hls_b3c1_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/int/xo/ip_repo/xilinx_com_hls_b3c0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tools/Xilinx/2025.2/Vitis/data/vitis/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:pipeline_reg:1.0'. The one found in IP location '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/pipeline_reg_v1_0' will take precedence over the same IP in location /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/pipeline_reg_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:clk_metadata_adapter:1.0'. The one found in IP location '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/clk_metadata_adapter_v1_0' will take precedence over the same IP in location /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axi_clk_metadata_adapter:1.0'. The one found in IP location '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/axi_clk_metadata_adapter_v1_0' will take precedence over the same IP in location /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/axi_clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axis_clk_metadata_adapter:1.0'. The one found in IP location '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/axis_clk_metadata_adapter_v1_0' will take precedence over the same IP in location /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/axis_clk_metadata_adapter_v1_0
+Command: synth_design -top bd_85ad_slice6_5_0 -part xcu55c-fsvh2892-2L-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu55c'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu55c'
+INFO: [Device 21-403] Loading part xcu55c-fsvh2892-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 177489
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3307.234 ; gain = 289.688 ; free physical = 6909 ; free virtual = 77016
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_slice6_5_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_20/synth/bd_85ad_slice6_5_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_36_axi_register_slice' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/bc4b/hdl/axi_register_slice_v2_1_vl_rfs.v:3721]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_36_axic_register_slice' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/bc4b/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_36_axic_register_slice' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/bc4b/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_36_axic_register_slice__parameterized0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/bc4b/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_36_axic_register_slice__parameterized0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/bc4b/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_36_axic_register_slice__parameterized1' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/bc4b/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_36_axic_register_slice__parameterized1' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/bc4b/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_36_axic_register_slice__parameterized2' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/bc4b/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_36_axic_register_slice__parameterized2' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/bc4b/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_36_axi_register_slice' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/bc4b/hdl/axi_register_slice_v2_1_vl_rfs.v:3721]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_slice6_5_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_20/synth/bd_85ad_slice6_5_0.v:53]
+INFO: [Synth 8-7129] Port m_axi_buser[0] in module axi_infrastructure_v1_1_0_vector2axi is either unconnected or has no load
+INFO: [Synth 8-7129] Port m_axi_ruser[0] in module axi_infrastructure_v1_1_0_vector2axi is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awregion[3] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awregion[2] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awregion[1] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awregion[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awuser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_wuser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_arregion[3] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_arregion[2] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_arregion[1] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_arregion[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_aruser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3404.203 ; gain = 386.656 ; free physical = 6785 ; free virtual = 76893
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3407.172 ; gain = 389.625 ; free physical = 6785 ; free virtual = 76893
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3407.172 ; gain = 389.625 ; free physical = 6785 ; free virtual = 76893
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3407.172 ; gain = 0.000 ; free physical = 6785 ; free virtual = 76892
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_20/bd_85ad_slice6_5_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_20/bd_85ad_slice6_5_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/bd_85ad_slice6_5_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/bd_85ad_slice6_5_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_20/bd_85ad_slice6_5_0_clocks.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_20/bd_85ad_slice6_5_0_clocks.xdc] for cell 'inst'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3481.109 ; gain = 0.000 ; free physical = 6175 ; free virtual = 76283
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3481.145 ; gain = 0.000 ; free physical = 6161 ; free virtual = 76269
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 3481.145 ; gain = 463.598 ; free physical = 6091 ; free virtual = 76200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu55c-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 3489.113 ; gain = 471.566 ; free physical = 6091 ; free virtual = 76200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 3489.113 ; gain = 471.566 ; free physical = 6091 ; free virtual = 76200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 3489.113 ; gain = 471.566 ; free physical = 6090 ; free virtual = 76200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	              290 Bit    Registers := 2     
+	              260 Bit    Registers := 2     
+	               57 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input  290 Bit        Muxes := 2     
+	   2 Input  260 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awregion[3] in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awregion[2] in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awregion[1] in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awregion[0] in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awuser[0] in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_wuser[0] in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_arregion[3] in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_arregion[2] in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_arregion[1] in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_arregion[0] in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_aruser[0] in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port m_axi_buser[0] in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+INFO: [Synth 8-7129] Port m_axi_ruser[0] in module axi_register_slice_v2_1_36_axi_register_slice is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3489.113 ; gain = 471.566 ; free physical = 6087 ; free virtual = 76198
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3951.055 ; gain = 933.508 ; free physical = 5619 ; free virtual = 75731
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3964.070 ; gain = 946.523 ; free physical = 5606 ; free virtual = 75718
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3980.086 ; gain = 962.539 ; free physical = 5590 ; free virtual = 75702
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 4151.898 ; gain = 1134.352 ; free physical = 5325 ; free virtual = 75437
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 4151.898 ; gain = 1134.352 ; free physical = 5325 ; free virtual = 75437
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 4151.898 ; gain = 1134.352 ; free physical = 5321 ; free virtual = 75433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 4151.898 ; gain = 1134.352 ; free physical = 5321 ; free virtual = 75433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 4151.898 ; gain = 1134.352 ; free physical = 5317 ; free virtual = 75429
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 4151.898 ; gain = 1134.352 ; free physical = 5317 ; free virtual = 75429
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     6|
+|2     |LUT2 |     2|
+|3     |LUT3 |   551|
+|4     |LUT4 |     7|
+|5     |FDRE |  1222|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 4151.898 ; gain = 1134.352 ; free physical = 5317 ; free virtual = 75429
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 4151.898 ; gain = 1060.379 ; free physical = 5285 ; free virtual = 75397
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 4151.898 ; gain = 1134.352 ; free physical = 5285 ; free virtual = 75397
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4151.898 ; gain = 0.000 ; free physical = 5438 ; free virtual = 75550
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4151.898 ; gain = 0.000 ; free physical = 5332 ; free virtual = 75444
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 3090c394
+INFO: [Common 17-83] Releasing license: Synthesis
+66 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 4151.898 ; gain = 2544.594 ; free physical = 5322 ; free virtual = 75434
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 3274.693; main = 3182.177; forked = 236.594
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4984.836; main = 4124.199; forked = 986.750
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4151.898 ; gain = 0.000 ; free physical = 5306 ; free virtual = 75419
+INFO: [Common 17-1381] The checkpoint '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/bd_85ad_slice6_5_0_synth_1/bd_85ad_slice6_5_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_85ad_slice6_5_0, cache-ID = 6adc66aed47edde3
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4151.898 ; gain = 0.000 ; free physical = 5207 ; free virtual = 75322
+INFO: [Common 17-1381] The checkpoint '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/bd_85ad_slice6_5_0_synth_1/bd_85ad_slice6_5_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file bd_85ad_slice6_5_0_utilization_synth.rpt -pb bd_85ad_slice6_5_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 10 01:47:11 2026...

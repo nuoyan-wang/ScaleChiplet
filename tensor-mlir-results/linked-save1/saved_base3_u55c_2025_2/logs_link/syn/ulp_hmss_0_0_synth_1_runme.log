@@ -1,0 +1,620 @@
+
+*** Running vivado
+    with args -log ulp_hmss_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ulp_hmss_0_0.tcl
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Apr 10 01:55:52 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source ulp_hmss_0_0.tcl -notrace
+INFO: Dispatch client connection id - 39599
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/int/xo/ip_repo/xilinx_com_hls_b3c2_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/int/xo/ip_repo/xilinx_com_hls_b3c1_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/int/xo/ip_repo/xilinx_com_hls_b3c0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tools/Xilinx/2025.2/Vitis/data/vitis/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:pipeline_reg:1.0'. The one found in IP location '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/pipeline_reg_v1_0' will take precedence over the same IP in location /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/pipeline_reg_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:clk_metadata_adapter:1.0'. The one found in IP location '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/clk_metadata_adapter_v1_0' will take precedence over the same IP in location /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axi_clk_metadata_adapter:1.0'. The one found in IP location '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/axi_clk_metadata_adapter_v1_0' will take precedence over the same IP in location /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/axi_clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axis_clk_metadata_adapter:1.0'. The one found in IP location '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/axis_clk_metadata_adapter_v1_0' will take precedence over the same IP in location /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/axis_clk_metadata_adapter_v1_0
+Command: synth_design -top ulp_hmss_0_0 -part xcu55c-fsvh2892-2L-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu55c'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu55c'
+INFO: [Device 21-403] Loading part xcu55c-fsvh2892-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 188253
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3408.879 ; gain = 286.688 ; free physical = 7928 ; free virtual = 78332
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ulp_hmss_0_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/synth/ulp_hmss_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:10]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_axi_apb_bridge_inst_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_axi_apb_bridge_inst_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_axi_apb_bridge_inst_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_axi_apb_bridge_inst_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_hbm_inst_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_hbm_inst_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_hbm_inst_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_hbm_inst_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'AXI_00_RDATA_PARITY' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_00_RID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_00_BID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_01_RDATA_PARITY' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_01_RID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_01_BID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_02_RDATA_PARITY' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_02_RID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_02_BID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_03_RDATA_PARITY' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_03_RID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_03_BID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_04_RDATA_PARITY' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_04_RID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_04_BID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_05_RDATA_PARITY' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_05_RID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_05_BID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_06_RDATA_PARITY' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_06_RID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_06_BID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_07_RDATA_PARITY' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_07_RID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_07_BID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_08_RDATA_PARITY' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_08_RID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_08_BID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_09_RDATA_PARITY' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_09_RID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_09_BID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_10_RDATA_PARITY' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_10_RID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_10_BID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_11_RDATA_PARITY' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_11_RID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7071] port 'AXI_11_BID' of module 'bd_85ad_hbm_inst_0' is unconnected for instance 'hbm_inst' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+WARNING: [Synth 8-7023] instance 'hbm_inst' of module 'bd_85ad_hbm_inst_0' has 410 connections declared, but only 374 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:1651]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_hbm_reset_sync_SLR0_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_hbm_reset_sync_SLR0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_hbm_reset_sync_SLR0_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_hbm_reset_sync_SLR0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_85ad_hbm_reset_sync_SLR0_0' is unconnected for instance 'hbm_reset_sync_SLR0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2026]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_85ad_hbm_reset_sync_SLR0_0' is unconnected for instance 'hbm_reset_sync_SLR0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2026]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_85ad_hbm_reset_sync_SLR0_0' is unconnected for instance 'hbm_reset_sync_SLR0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2026]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_85ad_hbm_reset_sync_SLR0_0' is unconnected for instance 'hbm_reset_sync_SLR0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2026]
+WARNING: [Synth 8-7023] instance 'hbm_reset_sync_SLR0' of module 'bd_85ad_hbm_reset_sync_SLR0_0' has 10 connections declared, but only 6 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2026]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_hbm_reset_sync_SLR1_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_hbm_reset_sync_SLR1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_hbm_reset_sync_SLR1_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_hbm_reset_sync_SLR1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_85ad_hbm_reset_sync_SLR1_0' is unconnected for instance 'hbm_reset_sync_SLR1' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2033]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_85ad_hbm_reset_sync_SLR1_0' is unconnected for instance 'hbm_reset_sync_SLR1' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2033]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_85ad_hbm_reset_sync_SLR1_0' is unconnected for instance 'hbm_reset_sync_SLR1' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2033]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_85ad_hbm_reset_sync_SLR1_0' is unconnected for instance 'hbm_reset_sync_SLR1' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2033]
+WARNING: [Synth 8-7023] instance 'hbm_reset_sync_SLR1' of module 'bd_85ad_hbm_reset_sync_SLR1_0' has 10 connections declared, but only 6 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2033]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_hbm_reset_sync_SLR2_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_hbm_reset_sync_SLR2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_hbm_reset_sync_SLR2_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_hbm_reset_sync_SLR2_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_85ad_hbm_reset_sync_SLR2_0' is unconnected for instance 'hbm_reset_sync_SLR2' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2040]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_85ad_hbm_reset_sync_SLR2_0' is unconnected for instance 'hbm_reset_sync_SLR2' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2040]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_85ad_hbm_reset_sync_SLR2_0' is unconnected for instance 'hbm_reset_sync_SLR2' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2040]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_85ad_hbm_reset_sync_SLR2_0' is unconnected for instance 'hbm_reset_sync_SLR2' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2040]
+WARNING: [Synth 8-7023] instance 'hbm_reset_sync_SLR2' of module 'bd_85ad_hbm_reset_sync_SLR2_0' has 10 connections declared, but only 6 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2040]
+INFO: [Synth 8-6157] synthesizing module 'init_logic_imp_KAN0DP' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3452]
+INFO: [Synth 8-6155] done synthesizing module 'init_logic_imp_KAN0DP' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3452]
+INFO: [Synth 8-6157] synthesizing module 'path_0_imp_1VLZ12L' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3466]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_interconnect1_0_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect1_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_interconnect1_0_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect1_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_slice1_0_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice1_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_slice1_0_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice1_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axi_awready' of module 'bd_85ad_slice1_0_0' is unconnected for instance 'slice1_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3679]
+WARNING: [Synth 8-7071] port 's_axi_wready' of module 'bd_85ad_slice1_0_0' is unconnected for instance 'slice1_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3679]
+WARNING: [Synth 8-7071] port 's_axi_bresp' of module 'bd_85ad_slice1_0_0' is unconnected for instance 'slice1_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3679]
+WARNING: [Synth 8-7071] port 's_axi_bvalid' of module 'bd_85ad_slice1_0_0' is unconnected for instance 'slice1_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3679]
+WARNING: [Synth 8-7071] port 'm_axi_awsize' of module 'bd_85ad_slice1_0_0' is unconnected for instance 'slice1_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3679]
+WARNING: [Synth 8-7071] port 'm_axi_arsize' of module 'bd_85ad_slice1_0_0' is unconnected for instance 'slice1_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3679]
+WARNING: [Synth 8-7023] instance 'slice1_0' of module 'bd_85ad_slice1_0_0' has 68 connections declared, but only 62 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3679]
+INFO: [Synth 8-6155] done synthesizing module 'path_0_imp_1VLZ12L' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3466]
+INFO: [Synth 8-6157] synthesizing module 'path_1_imp_HHIY0J' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:4423]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_interconnect2_1_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect2_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_interconnect2_1_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect2_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_slice2_1_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice2_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_slice2_1_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice2_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awsize' of module 'bd_85ad_slice2_1_0' is unconnected for instance 'slice2_1' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:4755]
+WARNING: [Synth 8-7071] port 'm_axi_arsize' of module 'bd_85ad_slice2_1_0' is unconnected for instance 'slice2_1' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:4755]
+WARNING: [Synth 8-7023] instance 'slice2_1' of module 'bd_85ad_slice2_1_0' has 68 connections declared, but only 66 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:4755]
+INFO: [Synth 8-6155] done synthesizing module 'path_1_imp_HHIY0J' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:4423]
+INFO: [Synth 8-6157] synthesizing module 'path_10_imp_8PCALP' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3744]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_interconnect11_10_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect11_10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_interconnect11_10_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect11_10_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_slice11_10_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice11_10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_slice11_10_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice11_10_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axi_awready' of module 'bd_85ad_slice11_10_0' is unconnected for instance 'slice11_10' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3957]
+WARNING: [Synth 8-7071] port 's_axi_wready' of module 'bd_85ad_slice11_10_0' is unconnected for instance 'slice11_10' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3957]
+WARNING: [Synth 8-7071] port 's_axi_bresp' of module 'bd_85ad_slice11_10_0' is unconnected for instance 'slice11_10' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3957]
+WARNING: [Synth 8-7071] port 's_axi_bvalid' of module 'bd_85ad_slice11_10_0' is unconnected for instance 'slice11_10' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3957]
+WARNING: [Synth 8-7071] port 'm_axi_awsize' of module 'bd_85ad_slice11_10_0' is unconnected for instance 'slice11_10' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3957]
+WARNING: [Synth 8-7071] port 'm_axi_arsize' of module 'bd_85ad_slice11_10_0' is unconnected for instance 'slice11_10' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3957]
+WARNING: [Synth 8-7023] instance 'slice11_10' of module 'bd_85ad_slice11_10_0' has 68 connections declared, but only 62 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3957]
+INFO: [Synth 8-6155] done synthesizing module 'path_10_imp_8PCALP' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3744]
+INFO: [Synth 8-6157] synthesizing module 'path_11_imp_1MT5WKZ' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:4022]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_interconnect0_11_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect0_11_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_interconnect0_11_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect0_11_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_slice0_11_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice0_11_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_slice0_11_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice0_11_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awsize' of module 'bd_85ad_slice0_11_0' is unconnected for instance 'slice0_11' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:4354]
+WARNING: [Synth 8-7071] port 'm_axi_arsize' of module 'bd_85ad_slice0_11_0' is unconnected for instance 'slice0_11' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:4354]
+WARNING: [Synth 8-7023] instance 'slice0_11' of module 'bd_85ad_slice0_11_0' has 68 connections declared, but only 66 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:4354]
+INFO: [Synth 8-6155] done synthesizing module 'path_11_imp_1MT5WKZ' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:4022]
+INFO: [Synth 8-6157] synthesizing module 'path_2_imp_1D9COY8' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:4824]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_interconnect3_2_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect3_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_interconnect3_2_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect3_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_slice3_2_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice3_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_slice3_2_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice3_2_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awsize' of module 'bd_85ad_slice3_2_0' is unconnected for instance 'slice3_2' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5156]
+WARNING: [Synth 8-7071] port 'm_axi_arsize' of module 'bd_85ad_slice3_2_0' is unconnected for instance 'slice3_2' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5156]
+WARNING: [Synth 8-7023] instance 'slice3_2' of module 'bd_85ad_slice3_2_0' has 68 connections declared, but only 66 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5156]
+INFO: [Synth 8-6155] done synthesizing module 'path_2_imp_1D9COY8' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:4824]
+INFO: [Synth 8-6157] synthesizing module 'path_3_imp_YPYJ7Y' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5225]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_interconnect4_3_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect4_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_interconnect4_3_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect4_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_slice4_3_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice4_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_slice4_3_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice4_3_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axi_awready' of module 'bd_85ad_slice4_3_0' is unconnected for instance 'slice4_3' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5438]
+WARNING: [Synth 8-7071] port 's_axi_wready' of module 'bd_85ad_slice4_3_0' is unconnected for instance 'slice4_3' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5438]
+WARNING: [Synth 8-7071] port 's_axi_bresp' of module 'bd_85ad_slice4_3_0' is unconnected for instance 'slice4_3' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5438]
+WARNING: [Synth 8-7071] port 's_axi_bvalid' of module 'bd_85ad_slice4_3_0' is unconnected for instance 'slice4_3' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5438]
+WARNING: [Synth 8-7071] port 'm_axi_awsize' of module 'bd_85ad_slice4_3_0' is unconnected for instance 'slice4_3' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5438]
+WARNING: [Synth 8-7071] port 'm_axi_arsize' of module 'bd_85ad_slice4_3_0' is unconnected for instance 'slice4_3' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5438]
+WARNING: [Synth 8-7023] instance 'slice4_3' of module 'bd_85ad_slice4_3_0' has 68 connections declared, but only 62 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5438]
+INFO: [Synth 8-6155] done synthesizing module 'path_3_imp_YPYJ7Y' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5225]
+INFO: [Synth 8-6157] synthesizing module 'path_4_imp_X9MXG7' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5503]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_interconnect5_4_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect5_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_interconnect5_4_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect5_4_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_slice5_4_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice5_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_slice5_4_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice5_4_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axi_awready' of module 'bd_85ad_slice5_4_0' is unconnected for instance 'slice5_4' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5716]
+WARNING: [Synth 8-7071] port 's_axi_wready' of module 'bd_85ad_slice5_4_0' is unconnected for instance 'slice5_4' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5716]
+WARNING: [Synth 8-7071] port 's_axi_bresp' of module 'bd_85ad_slice5_4_0' is unconnected for instance 'slice5_4' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5716]
+WARNING: [Synth 8-7071] port 's_axi_bvalid' of module 'bd_85ad_slice5_4_0' is unconnected for instance 'slice5_4' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5716]
+WARNING: [Synth 8-7071] port 'm_axi_awsize' of module 'bd_85ad_slice5_4_0' is unconnected for instance 'slice5_4' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5716]
+WARNING: [Synth 8-7071] port 'm_axi_arsize' of module 'bd_85ad_slice5_4_0' is unconnected for instance 'slice5_4' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5716]
+WARNING: [Synth 8-7023] instance 'slice5_4' of module 'bd_85ad_slice5_4_0' has 68 connections declared, but only 62 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5716]
+INFO: [Synth 8-6155] done synthesizing module 'path_4_imp_X9MXG7' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5503]
+INFO: [Synth 8-6157] synthesizing module 'path_5_imp_1FYUZWP' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5781]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_interconnect6_5_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect6_5_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_interconnect6_5_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect6_5_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_slice6_5_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice6_5_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_slice6_5_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice6_5_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axi_awready' of module 'bd_85ad_slice6_5_0' is unconnected for instance 'slice6_5' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5994]
+WARNING: [Synth 8-7071] port 's_axi_wready' of module 'bd_85ad_slice6_5_0' is unconnected for instance 'slice6_5' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5994]
+WARNING: [Synth 8-7071] port 's_axi_bresp' of module 'bd_85ad_slice6_5_0' is unconnected for instance 'slice6_5' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5994]
+WARNING: [Synth 8-7071] port 's_axi_bvalid' of module 'bd_85ad_slice6_5_0' is unconnected for instance 'slice6_5' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5994]
+WARNING: [Synth 8-7071] port 'm_axi_awsize' of module 'bd_85ad_slice6_5_0' is unconnected for instance 'slice6_5' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5994]
+WARNING: [Synth 8-7071] port 'm_axi_arsize' of module 'bd_85ad_slice6_5_0' is unconnected for instance 'slice6_5' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5994]
+WARNING: [Synth 8-7023] instance 'slice6_5' of module 'bd_85ad_slice6_5_0' has 68 connections declared, but only 62 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5994]
+INFO: [Synth 8-6155] done synthesizing module 'path_5_imp_1FYUZWP' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:5781]
+INFO: [Synth 8-6157] synthesizing module 'path_6_imp_EX0IWA' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6059]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_interconnect7_6_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect7_6_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_interconnect7_6_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect7_6_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_slice7_6_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice7_6_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_slice7_6_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice7_6_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axi_awready' of module 'bd_85ad_slice7_6_0' is unconnected for instance 'slice7_6' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6272]
+WARNING: [Synth 8-7071] port 's_axi_wready' of module 'bd_85ad_slice7_6_0' is unconnected for instance 'slice7_6' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6272]
+WARNING: [Synth 8-7071] port 's_axi_bresp' of module 'bd_85ad_slice7_6_0' is unconnected for instance 'slice7_6' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6272]
+WARNING: [Synth 8-7071] port 's_axi_bvalid' of module 'bd_85ad_slice7_6_0' is unconnected for instance 'slice7_6' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6272]
+WARNING: [Synth 8-7071] port 'm_axi_awsize' of module 'bd_85ad_slice7_6_0' is unconnected for instance 'slice7_6' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6272]
+WARNING: [Synth 8-7071] port 'm_axi_arsize' of module 'bd_85ad_slice7_6_0' is unconnected for instance 'slice7_6' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6272]
+WARNING: [Synth 8-7023] instance 'slice7_6' of module 'bd_85ad_slice7_6_0' has 68 connections declared, but only 62 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6272]
+INFO: [Synth 8-6155] done synthesizing module 'path_6_imp_EX0IWA' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6059]
+INFO: [Synth 8-6157] synthesizing module 'path_7_imp_1X7AIPG' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6337]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_interconnect8_7_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect8_7_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_interconnect8_7_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect8_7_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_slice8_7_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice8_7_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_slice8_7_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice8_7_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axi_awready' of module 'bd_85ad_slice8_7_0' is unconnected for instance 'slice8_7' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6550]
+WARNING: [Synth 8-7071] port 's_axi_wready' of module 'bd_85ad_slice8_7_0' is unconnected for instance 'slice8_7' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6550]
+WARNING: [Synth 8-7071] port 's_axi_bresp' of module 'bd_85ad_slice8_7_0' is unconnected for instance 'slice8_7' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6550]
+WARNING: [Synth 8-7071] port 's_axi_bvalid' of module 'bd_85ad_slice8_7_0' is unconnected for instance 'slice8_7' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6550]
+WARNING: [Synth 8-7071] port 'm_axi_awsize' of module 'bd_85ad_slice8_7_0' is unconnected for instance 'slice8_7' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6550]
+WARNING: [Synth 8-7071] port 'm_axi_arsize' of module 'bd_85ad_slice8_7_0' is unconnected for instance 'slice8_7' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6550]
+WARNING: [Synth 8-7023] instance 'slice8_7' of module 'bd_85ad_slice8_7_0' has 68 connections declared, but only 62 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6550]
+INFO: [Synth 8-6155] done synthesizing module 'path_7_imp_1X7AIPG' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6337]
+INFO: [Synth 8-6157] synthesizing module 'path_8_imp_8YHLSO' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6615]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_interconnect9_8_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect9_8_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_interconnect9_8_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect9_8_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_slice9_8_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice9_8_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_slice9_8_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice9_8_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axi_awready' of module 'bd_85ad_slice9_8_0' is unconnected for instance 'slice9_8' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6828]
+WARNING: [Synth 8-7071] port 's_axi_wready' of module 'bd_85ad_slice9_8_0' is unconnected for instance 'slice9_8' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6828]
+WARNING: [Synth 8-7071] port 's_axi_bresp' of module 'bd_85ad_slice9_8_0' is unconnected for instance 'slice9_8' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6828]
+WARNING: [Synth 8-7071] port 's_axi_bvalid' of module 'bd_85ad_slice9_8_0' is unconnected for instance 'slice9_8' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6828]
+INFO: [Common 17-14] Message 'Synth 8-7071' appears 100 times and further instances of the messages will be disabled.
+WARNING: [Synth 8-7023] instance 'slice9_8' of module 'bd_85ad_slice9_8_0' has 68 connections declared, but only 62 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6828]
+INFO: [Synth 8-6155] done synthesizing module 'path_8_imp_8YHLSO' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6615]
+INFO: [Synth 8-6157] synthesizing module 'path_9_imp_1TQ737Q' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6893]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_interconnect10_9_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect10_9_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_interconnect10_9_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_interconnect10_9_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_slice10_9_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice10_9_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_slice10_9_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_slice10_9_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'slice10_9' of module 'bd_85ad_slice10_9_0' has 68 connections declared, but only 66 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:7225]
+INFO: [Synth 8-6155] done synthesizing module 'path_9_imp_1TQ737Q' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:6893]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_vip_S00_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S00_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_vip_S00_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S00_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'vip_S00' of module 'bd_85ad_vip_S00_0' has 64 connections declared, but only 56 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2766]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_vip_S01_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S01_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_vip_S01_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S01_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'vip_S01' of module 'bd_85ad_vip_S01_0' has 64 connections declared, but only 56 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2823]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_vip_S02_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S02_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_vip_S02_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S02_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'vip_S02' of module 'bd_85ad_vip_S02_0' has 64 connections declared, but only 56 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2880]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_vip_S03_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S03_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_vip_S03_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S03_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'vip_S03' of module 'bd_85ad_vip_S03_0' has 64 connections declared, but only 56 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2937]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_vip_S04_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S04_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_vip_S04_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S04_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'vip_S04' of module 'bd_85ad_vip_S04_0' has 64 connections declared, but only 56 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:2994]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_vip_S05_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S05_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_vip_S05_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S05_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'vip_S05' of module 'bd_85ad_vip_S05_0' has 64 connections declared, but only 56 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3051]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_vip_S06_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S06_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_vip_S06_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S06_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'vip_S06' of module 'bd_85ad_vip_S06_0' has 64 connections declared, but only 56 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3108]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_vip_S07_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S07_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_vip_S07_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S07_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'vip_S07' of module 'bd_85ad_vip_S07_0' has 64 connections declared, but only 56 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3165]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_vip_S08_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S08_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_vip_S08_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S08_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'vip_S08' of module 'bd_85ad_vip_S08_0' has 64 connections declared, but only 56 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3222]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_vip_S09_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S09_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_vip_S09_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S09_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'vip_S09' of module 'bd_85ad_vip_S09_0' has 64 connections declared, but only 56 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3279]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_vip_S10_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_vip_S10_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S10_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'vip_S10' of module 'bd_85ad_vip_S10_0' has 64 connections declared, but only 56 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3336]
+INFO: [Synth 8-6157] synthesizing module 'bd_85ad_vip_S11_0' [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S11_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad_vip_S11_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/.Xil/Vivado-187873-Nu-SER8/realtime/bd_85ad_vip_S11_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'vip_S11' of module 'bd_85ad_vip_S11_0' has 64 connections declared, but only 56 given [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:3393]
+INFO: [Synth 8-6155] done synthesizing module 'bd_85ad' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/synth/bd_85ad.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ulp_hmss_0_0' (0#1) [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/synth/ulp_hmss_0_0.v:53]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3557.848 ; gain = 435.656 ; free physical = 7750 ; free virtual = 78156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3557.848 ; gain = 435.656 ; free physical = 7750 ; free virtual = 78156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3557.848 ; gain = 435.656 ; free physical = 7750 ; free virtual = 78156
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.1 . Memory (MB): peak = 3557.848 ; gain = 0.000 ; free physical = 7750 ; free virtual = 78156
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_0/bd_85ad_hbm_inst_0/bd_85ad_hbm_inst_0_in_context.xdc] for cell 'inst/hbm_inst'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_0/bd_85ad_hbm_inst_0/bd_85ad_hbm_inst_0_in_context.xdc] for cell 'inst/hbm_inst'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_1/bd_85ad_hbm_reset_sync_SLR0_0/bd_85ad_hbm_reset_sync_SLR1_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR0'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_1/bd_85ad_hbm_reset_sync_SLR0_0/bd_85ad_hbm_reset_sync_SLR1_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR0'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_2/bd_85ad_hbm_reset_sync_SLR1_0/bd_85ad_hbm_reset_sync_SLR1_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR1'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_2/bd_85ad_hbm_reset_sync_SLR1_0/bd_85ad_hbm_reset_sync_SLR1_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR1'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_3/bd_85ad_hbm_reset_sync_SLR2_0/bd_85ad_hbm_reset_sync_SLR1_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR2'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_3/bd_85ad_hbm_reset_sync_SLR2_0/bd_85ad_hbm_reset_sync_SLR1_0_in_context.xdc] for cell 'inst/hbm_reset_sync_SLR2'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_6/bd_85ad_vip_S01_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S01'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_6/bd_85ad_vip_S01_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S01'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_9/bd_85ad_vip_S02_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S02'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_9/bd_85ad_vip_S02_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S02'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_12/bd_85ad_vip_S03_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S03'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_12/bd_85ad_vip_S03_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S03'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_15/bd_85ad_vip_S04_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S04'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_15/bd_85ad_vip_S04_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S04'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_18/bd_85ad_vip_S05_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S05'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_18/bd_85ad_vip_S05_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S05'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_21/bd_85ad_vip_S06_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S06'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_21/bd_85ad_vip_S06_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S06'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_24/bd_85ad_vip_S07_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S07'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_24/bd_85ad_vip_S07_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S07'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_27/bd_85ad_vip_S08_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S08'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_27/bd_85ad_vip_S08_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S08'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_30/bd_85ad_vip_S09_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S09'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_30/bd_85ad_vip_S09_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S09'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_33/bd_85ad_vip_S10_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S10'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_33/bd_85ad_vip_S10_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S10'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_36/bd_85ad_vip_S11_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S11'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_36/bd_85ad_vip_S11_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S11'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_39/bd_85ad_vip_S00_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S00'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_39/bd_85ad_vip_S00_0/bd_85ad_vip_S11_0_in_context.xdc] for cell 'inst/vip_S00'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_40/bd_85ad_axi_apb_bridge_inst_0/bd_85ad_axi_apb_bridge_inst_0_in_context.xdc] for cell 'inst/axi_apb_bridge_inst'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_40/bd_85ad_axi_apb_bridge_inst_0/bd_85ad_axi_apb_bridge_inst_0_in_context.xdc] for cell 'inst/axi_apb_bridge_inst'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_4/bd_85ad_interconnect1_0_0/bd_85ad_interconnect1_0_0_in_context.xdc] for cell 'inst/path_0/interconnect1_0'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_4/bd_85ad_interconnect1_0_0/bd_85ad_interconnect1_0_0_in_context.xdc] for cell 'inst/path_0/interconnect1_0'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_5/bd_85ad_slice1_0_0/bd_85ad_slice6_5_0_in_context.xdc] for cell 'inst/path_0/slice1_0'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_5/bd_85ad_slice1_0_0/bd_85ad_slice6_5_0_in_context.xdc] for cell 'inst/path_0/slice1_0'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_7/bd_85ad_interconnect2_1_0/bd_85ad_interconnect2_1_0_in_context.xdc] for cell 'inst/path_1/interconnect2_1'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_7/bd_85ad_interconnect2_1_0/bd_85ad_interconnect2_1_0_in_context.xdc] for cell 'inst/path_1/interconnect2_1'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_8/bd_85ad_slice2_1_0/bd_85ad_slice6_5_0_in_context.xdc] for cell 'inst/path_1/slice2_1'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_8/bd_85ad_slice2_1_0/bd_85ad_slice6_5_0_in_context.xdc] for cell 'inst/path_1/slice2_1'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_10/bd_85ad_interconnect3_2_0/bd_85ad_interconnect3_2_0_in_context.xdc] for cell 'inst/path_2/interconnect3_2'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_10/bd_85ad_interconnect3_2_0/bd_85ad_interconnect3_2_0_in_context.xdc] for cell 'inst/path_2/interconnect3_2'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_11/bd_85ad_slice3_2_0/bd_85ad_slice6_5_0_in_context.xdc] for cell 'inst/path_2/slice3_2'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_11/bd_85ad_slice3_2_0/bd_85ad_slice6_5_0_in_context.xdc] for cell 'inst/path_2/slice3_2'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_13/bd_85ad_interconnect4_3_0/bd_85ad_interconnect4_3_0_in_context.xdc] for cell 'inst/path_3/interconnect4_3'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_13/bd_85ad_interconnect4_3_0/bd_85ad_interconnect4_3_0_in_context.xdc] for cell 'inst/path_3/interconnect4_3'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_14/bd_85ad_slice4_3_0/bd_85ad_slice6_5_0_in_context.xdc] for cell 'inst/path_3/slice4_3'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_14/bd_85ad_slice4_3_0/bd_85ad_slice6_5_0_in_context.xdc] for cell 'inst/path_3/slice4_3'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_16/bd_85ad_interconnect5_4_0/bd_85ad_interconnect5_4_0_in_context.xdc] for cell 'inst/path_4/interconnect5_4'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_16/bd_85ad_interconnect5_4_0/bd_85ad_interconnect5_4_0_in_context.xdc] for cell 'inst/path_4/interconnect5_4'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_17/bd_85ad_slice5_4_0/bd_85ad_slice6_5_0_in_context.xdc] for cell 'inst/path_4/slice5_4'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_17/bd_85ad_slice5_4_0/bd_85ad_slice6_5_0_in_context.xdc] for cell 'inst/path_4/slice5_4'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_19/bd_85ad_interconnect6_5_0/bd_85ad_interconnect6_5_0_in_context.xdc] for cell 'inst/path_5/interconnect6_5'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_19/bd_85ad_interconnect6_5_0/bd_85ad_interconnect6_5_0_in_context.xdc] for cell 'inst/path_5/interconnect6_5'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_20/bd_85ad_slice6_5_0/bd_85ad_slice6_5_0_in_context.xdc] for cell 'inst/path_5/slice6_5'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_20/bd_85ad_slice6_5_0/bd_85ad_slice6_5_0_in_context.xdc] for cell 'inst/path_5/slice6_5'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_22/bd_85ad_interconnect7_6_0/bd_85ad_interconnect7_6_0_in_context.xdc] for cell 'inst/path_6/interconnect7_6'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_22/bd_85ad_interconnect7_6_0/bd_85ad_interconnect7_6_0_in_context.xdc] for cell 'inst/path_6/interconnect7_6'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_23/bd_85ad_slice7_6_0/bd_85ad_slice6_5_0_in_context.xdc] for cell 'inst/path_6/slice7_6'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_23/bd_85ad_slice7_6_0/bd_85ad_slice6_5_0_in_context.xdc] for cell 'inst/path_6/slice7_6'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_25/bd_85ad_interconnect8_7_0/bd_85ad_interconnect8_7_0_in_context.xdc] for cell 'inst/path_7/interconnect8_7'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_25/bd_85ad_interconnect8_7_0/bd_85ad_interconnect8_7_0_in_context.xdc] for cell 'inst/path_7/interconnect8_7'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_26/bd_85ad_slice8_7_0/bd_85ad_slice9_8_0_in_context.xdc] for cell 'inst/path_7/slice8_7'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_26/bd_85ad_slice8_7_0/bd_85ad_slice9_8_0_in_context.xdc] for cell 'inst/path_7/slice8_7'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_28/bd_85ad_interconnect9_8_0/bd_85ad_interconnect9_8_0_in_context.xdc] for cell 'inst/path_8/interconnect9_8'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_28/bd_85ad_interconnect9_8_0/bd_85ad_interconnect9_8_0_in_context.xdc] for cell 'inst/path_8/interconnect9_8'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_29/bd_85ad_slice9_8_0/bd_85ad_slice9_8_0_in_context.xdc] for cell 'inst/path_8/slice9_8'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_29/bd_85ad_slice9_8_0/bd_85ad_slice9_8_0_in_context.xdc] for cell 'inst/path_8/slice9_8'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_31/bd_85ad_interconnect10_9_0/bd_85ad_interconnect10_9_0_in_context.xdc] for cell 'inst/path_9/interconnect10_9'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_31/bd_85ad_interconnect10_9_0/bd_85ad_interconnect10_9_0_in_context.xdc] for cell 'inst/path_9/interconnect10_9'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_32/bd_85ad_slice10_9_0/bd_85ad_slice11_10_0_in_context.xdc] for cell 'inst/path_9/slice10_9'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_32/bd_85ad_slice10_9_0/bd_85ad_slice11_10_0_in_context.xdc] for cell 'inst/path_9/slice10_9'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_34/bd_85ad_interconnect11_10_0/bd_85ad_interconnect11_10_0_in_context.xdc] for cell 'inst/path_10/interconnect11_10'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_34/bd_85ad_interconnect11_10_0/bd_85ad_interconnect11_10_0_in_context.xdc] for cell 'inst/path_10/interconnect11_10'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_35/bd_85ad_slice11_10_0/bd_85ad_slice11_10_0_in_context.xdc] for cell 'inst/path_10/slice11_10'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_35/bd_85ad_slice11_10_0/bd_85ad_slice11_10_0_in_context.xdc] for cell 'inst/path_10/slice11_10'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_37/bd_85ad_interconnect0_11_0/bd_85ad_interconnect0_11_0_in_context.xdc] for cell 'inst/path_11/interconnect0_11'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_37/bd_85ad_interconnect0_11_0/bd_85ad_interconnect0_11_0_in_context.xdc] for cell 'inst/path_11/interconnect0_11'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_38/bd_85ad_slice0_11_0/bd_85ad_slice11_10_0_in_context.xdc] for cell 'inst/path_11/slice0_11'
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_hmss_0_0/bd_0/ip/ip_38/bd_85ad_slice0_11_0/bd_85ad_slice11_10_0_in_context.xdc] for cell 'inst/path_11/slice0_11'
+Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3570.496 ; gain = 0.000 ; free physical = 7433 ; free virtual = 77839
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.2 . Memory (MB): peak = 3570.531 ; gain = 0.000 ; free physical = 7356 ; free virtual = 77762
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3570.531 ; gain = 448.340 ; free physical = 6325 ; free virtual = 76738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu55c-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3578.500 ; gain = 456.309 ; free physical = 6320 ; free virtual = 76738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3578.500 ; gain = 456.309 ; free physical = 6327 ; free virtual = 76734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3578.500 ; gain = 456.309 ; free physical = 6326 ; free virtual = 76734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3578.500 ; gain = 456.309 ; free physical = 6250 ; free virtual = 76659
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 4078.785 ; gain = 956.594 ; free physical = 5271 ; free virtual = 75680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 4091.785 ; gain = 969.594 ; free physical = 5256 ; free virtual = 75665
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 4112.762 ; gain = 990.570 ; free physical = 5210 ; free virtual = 75619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 4280.574 ; gain = 1158.383 ; free physical = 5065 ; free virtual = 75474
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 4280.574 ; gain = 1158.383 ; free physical = 5064 ; free virtual = 75473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 4280.574 ; gain = 1158.383 ; free physical = 5058 ; free virtual = 75467
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 4280.574 ; gain = 1158.383 ; free physical = 5058 ; free virtual = 75467
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 4280.574 ; gain = 1158.383 ; free physical = 5058 ; free virtual = 75467
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 4280.574 ; gain = 1158.383 ; free physical = 5057 ; free virtual = 75467
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |bd_85ad_axi_apb_bridge_inst_0 |         1|
+|2     |bd_85ad_hbm_inst_0            |         1|
+|3     |bd_85ad_hbm_reset_sync_SLR0_0 |         1|
+|4     |bd_85ad_hbm_reset_sync_SLR1_0 |         1|
+|5     |bd_85ad_hbm_reset_sync_SLR2_0 |         1|
+|6     |bd_85ad_vip_S00_0             |         1|
+|7     |bd_85ad_vip_S01_0             |         1|
+|8     |bd_85ad_vip_S02_0             |         1|
+|9     |bd_85ad_vip_S03_0             |         1|
+|10    |bd_85ad_vip_S04_0             |         1|
+|11    |bd_85ad_vip_S05_0             |         1|
+|12    |bd_85ad_vip_S06_0             |         1|
+|13    |bd_85ad_vip_S07_0             |         1|
+|14    |bd_85ad_vip_S08_0             |         1|
+|15    |bd_85ad_vip_S09_0             |         1|
+|16    |bd_85ad_vip_S10_0             |         1|
+|17    |bd_85ad_vip_S11_0             |         1|
+|18    |bd_85ad_interconnect1_0_0     |         1|
+|19    |bd_85ad_slice1_0_0            |         1|
+|20    |bd_85ad_interconnect2_1_0     |         1|
+|21    |bd_85ad_slice2_1_0            |         1|
+|22    |bd_85ad_interconnect11_10_0   |         1|
+|23    |bd_85ad_slice11_10_0          |         1|
+|24    |bd_85ad_interconnect0_11_0    |         1|
+|25    |bd_85ad_slice0_11_0           |         1|
+|26    |bd_85ad_interconnect3_2_0     |         1|
+|27    |bd_85ad_slice3_2_0            |         1|
+|28    |bd_85ad_interconnect4_3_0     |         1|
+|29    |bd_85ad_slice4_3_0            |         1|
+|30    |bd_85ad_interconnect5_4_0     |         1|
+|31    |bd_85ad_slice5_4_0            |         1|
+|32    |bd_85ad_interconnect6_5_0     |         1|
+|33    |bd_85ad_slice6_5_0            |         1|
+|34    |bd_85ad_interconnect7_6_0     |         1|
+|35    |bd_85ad_slice7_6_0            |         1|
+|36    |bd_85ad_interconnect8_7_0     |         1|
+|37    |bd_85ad_slice8_7_0            |         1|
+|38    |bd_85ad_interconnect9_8_0     |         1|
+|39    |bd_85ad_slice9_8_0            |         1|
+|40    |bd_85ad_interconnect10_9_0    |         1|
+|41    |bd_85ad_slice10_9_0           |         1|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------------+------+
+|      |Cell                        |Count |
++------+----------------------------+------+
+|1     |bd_85ad_axi_apb_bridge_inst |     1|
+|2     |bd_85ad_hbm_inst            |     1|
+|3     |bd_85ad_hbm_reset_sync_SLR0 |     1|
+|4     |bd_85ad_hbm_reset_sync_SLR1 |     1|
+|5     |bd_85ad_hbm_reset_sync_SLR2 |     1|
+|6     |bd_85ad_interconnect0_11    |     1|
+|7     |bd_85ad_interconnect10_9    |     1|
+|8     |bd_85ad_interconnect11_10   |     1|
+|9     |bd_85ad_interconnect1_0     |     1|
+|10    |bd_85ad_interconnect2_1     |     1|
+|11    |bd_85ad_interconnect3_2     |     1|
+|12    |bd_85ad_interconnect4_3     |     1|
+|13    |bd_85ad_interconnect5_4     |     1|
+|14    |bd_85ad_interconnect6_5     |     1|
+|15    |bd_85ad_interconnect7_6     |     1|
+|16    |bd_85ad_interconnect8_7     |     1|
+|17    |bd_85ad_interconnect9_8     |     1|
+|18    |bd_85ad_slice0_11           |     1|
+|19    |bd_85ad_slice10_9           |     1|
+|20    |bd_85ad_slice11_10          |     1|
+|21    |bd_85ad_slice1_0            |     1|
+|22    |bd_85ad_slice2_1            |     1|
+|23    |bd_85ad_slice3_2            |     1|
+|24    |bd_85ad_slice4_3            |     1|
+|25    |bd_85ad_slice5_4            |     1|
+|26    |bd_85ad_slice6_5            |     1|
+|27    |bd_85ad_slice7_6            |     1|
+|28    |bd_85ad_slice8_7            |     1|
+|29    |bd_85ad_slice9_8            |     1|
+|30    |bd_85ad_vip_S00             |     1|
+|31    |bd_85ad_vip_S01             |     1|
+|32    |bd_85ad_vip_S02             |     1|
+|33    |bd_85ad_vip_S03             |     1|
+|34    |bd_85ad_vip_S04             |     1|
+|35    |bd_85ad_vip_S05             |     1|
+|36    |bd_85ad_vip_S06             |     1|
+|37    |bd_85ad_vip_S07             |     1|
+|38    |bd_85ad_vip_S08             |     1|
+|39    |bd_85ad_vip_S09             |     1|
+|40    |bd_85ad_vip_S10             |     1|
+|41    |bd_85ad_vip_S11             |     1|
++------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 4280.574 ; gain = 1158.383 ; free physical = 5057 ; free virtual = 75467
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 4280.574 ; gain = 1145.699 ; free physical = 5057 ; free virtual = 75467
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 4280.574 ; gain = 1158.383 ; free physical = 5057 ; free virtual = 75467
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.1 . Memory (MB): peak = 4280.574 ; gain = 0.000 ; free physical = 5225 ; free virtual = 75634
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4280.574 ; gain = 0.000 ; free physical = 5224 ; free virtual = 75634
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: f1737645
+INFO: [Common 17-83] Releasing license: Synthesis
+135 Infos, 132 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 4280.574 ; gain = 2572.094 ; free physical = 5223 ; free virtual = 75632
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 3401.903; main = 3316.453; forked = 254.396
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 5111.512; main = 4252.875; forked = 986.750
+INFO: [Common 17-1381] The checkpoint '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/ulp_hmss_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ulp_hmss_0_0, cache-ID = a570db7f6b34b2ba
+INFO: [Coretcl 2-1174] Renamed 54 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_base3_3slr_stream/_x/link/vivado/vpl/prj/prj.runs/ulp_hmss_0_0_synth_1/ulp_hmss_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file ulp_hmss_0_0_utilization_synth.rpt -pb ulp_hmss_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 10 01:56:43 2026...
