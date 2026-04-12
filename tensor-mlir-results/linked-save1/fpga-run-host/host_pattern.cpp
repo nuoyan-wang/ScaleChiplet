@@ -1,11 +1,10 @@
-#include <ap_float.h>
-#include <ap_int.h>
 #include <xrt/xrt_bo.h>
 #include <xrt/xrt_device.h>
 #include <xrt/xrt_kernel.h>
 #include <xrt/xrt_uuid.h>
 
 #include <algorithm>
+#include <cstring>
 #include <chrono>
 #include <cstdint>
 #include <exception>
@@ -17,9 +16,9 @@
 
 namespace {
 
-constexpr size_t F16 = sizeof(ap_float<16, 8>);
-constexpr size_t I32 = sizeof(ap_int<32>);
-constexpr size_t I1 = sizeof(ap_int<1>);
+constexpr size_t F16 = sizeof(uint16_t);
+constexpr size_t I32 = sizeof(int32_t);
+constexpr size_t I1 = sizeof(uint8_t);
 
 struct NamedBo {
   std::string name;
@@ -54,22 +53,29 @@ void fill_bo(NamedBo &buffer, T value) {
   buffer.bo.sync(XCL_BO_SYNC_BO_TO_DEVICE);
 }
 
-ap_float<16, 8> float_pattern(const std::string &pattern) {
+uint16_t float_pattern(const std::string &pattern) {
   if (pattern == "zero")
-    return ap_float<16, 8>(0.0);
+    return 0x0000;
   if (pattern == "one")
-    return ap_float<16, 8>(1.0);
+    return 0x3f80;
   if (pattern == "tenth")
-    return ap_float<16, 8>(0.1);
+    return 0x3dcd;
   throw std::runtime_error("pattern must be one of: zero, one, tenth");
+}
+
+float bf16_to_float(uint16_t value) {
+  uint32_t bits = static_cast<uint32_t>(value) << 16;
+  float result;
+  std::memcpy(&result, &bits, sizeof(result));
+  return result;
 }
 
 void print_first_output(NamedBo &buffer) {
   buffer.bo.sync(XCL_BO_SYNC_BO_FROM_DEVICE);
-  auto *ptr = buffer.bo.map<ap_float<16, 8> *>();
+  auto *ptr = buffer.bo.map<uint16_t *>();
   std::cout << "hidden_out first 16 values:";
   for (size_t i = 0; i < 16; ++i)
-    std::cout << " " << static_cast<float>(ptr[i]);
+    std::cout << " " << bf16_to_float(ptr[i]);
   std::cout << "\n";
 }
 
@@ -128,9 +134,9 @@ int main(int argc, char **argv) {
     if (iterations <= 0)
       throw std::runtime_error("iterations must be positive");
 
-    const ap_float<16, 8> f16_value = float_pattern(pattern);
-    const ap_int<32> i32_value = pattern == "zero" ? 0 : 1;
-    const ap_int<1> i1_value = pattern == "zero" ? 0 : 1;
+    const uint16_t f16_value = float_pattern(pattern);
+    const int32_t i32_value = pattern == "zero" ? 0 : 1;
+    const uint8_t i1_value = pattern == "zero" ? 0 : 1;
 
     auto device = xrt::device(0);
     auto uuid = device.load_xclbin(xclbin_path);
