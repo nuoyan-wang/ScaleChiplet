@@ -15,6 +15,7 @@
 #include <iostream>
 #include <cstdio>
 #include <limits>
+#include <numeric>
 #include <stdexcept>
 #include <string>
 #include <vector>
@@ -37,7 +38,14 @@ struct NamedBo {
 struct DiffStats {
   float max_abs = 0.0f;
   double mean_abs = 0.0;
+  double mean_ref_abs = 0.0;
+  double mean_percent = 0.0;
   size_t count = 0;
+};
+
+struct TopToken {
+  int token_id = -1;
+  float logit = -std::numeric_limits<float>::infinity();
 };
 
 xrt::kernel open_kernel(xrt::device &device, const xrt::uuid &uuid,
@@ -108,6 +116,7 @@ DiffStats compare_bf16_bo_to_file(NamedBo &buffer, const fs::path &golden_path) 
   DiffStats stats;
   stats.count = n;
   double sum = 0.0;
+  double ref_sum = 0.0;
   float max_abs = 0.0f;
   for (size_t i = 0; i < n; ++i) {
     const float a = bf16_to_float(actual[i]);
@@ -119,9 +128,15 @@ DiffStats compare_bf16_bo_to_file(NamedBo &buffer, const fs::path &golden_path) 
     } else {
       max_abs = std::numeric_limits<float>::infinity();
     }
+    if (std::isfinite(e))
+      ref_sum += std::abs(e);
   }
   stats.max_abs = max_abs;
   stats.mean_abs = n ? sum / static_cast<double>(n) : 0.0;
+  stats.mean_ref_abs = n ? ref_sum / static_cast<double>(n) : 0.0;
+  stats.mean_percent =
+      stats.mean_ref_abs > 0.0 ? 100.0 * stats.mean_abs / stats.mean_ref_abs
+                               : std::numeric_limits<double>::infinity();
   return stats;
 }
 
@@ -144,6 +159,76 @@ void print_first_bf16(NamedBo &buffer, size_t count) {
   for (size_t i = 0; i < n; ++i)
     std::cout << " " << bf16_to_float(ptr[i]);
   std::cout << "\n";
+}
+
+std::vector<float> read_bf16_file_as_float(const fs::path &path,
+                                           size_t elements) {
+  auto data = read_file_exact(path, elements * sizeof(uint16_t));
+  const auto *raw = reinterpret_cast<const uint16_t *>(data.data());
+  std::vector<float> result(elements);
+  for (size_t i = 0; i < elements; ++i)
+    result[i] = bf16_to_float(raw[i]);
+  return result;
+}
+
+std::vector<float> read_bf16_bo_as_float(NamedBo &buffer) {
+  buffer.bo.sync(XCL_BO_SYNC_BO_FROM_DEVICE);
+  auto *raw = buffer.bo.map<uint16_t *>();
+  const size_t elements = buffer.bytes / sizeof(uint16_t);
+  std::vector<float> result(elements);
+  for (size_t i = 0; i < elements; ++i)
+    result[i] = bf16_to_float(raw[i]);
+  return result;
+}
+
+int read_first_i32(const fs::path &path) {
+  auto data = read_file_exact(path, sizeof(int32_t));
+  int32_t value = 0;
+  std::memcpy(&value, data.data(), sizeof(value));
+  return value;
+}
+
+TopToken compute_next_token_cpu(const std::vector<float> &hidden,
+                                const std::vector<float> &ln_w,
+                                const std::vector<float> &ln_b,
+                                const std::vector<float> &lm_head_w) {
+  constexpr size_t hidden_size = 768;
+  if (hidden.size() != hidden_size || ln_w.size() != hidden_size ||
+      ln_b.size() != hidden_size)
+    throw std::runtime_error("bad hidden/ln tensor size");
+  if (lm_head_w.size() % hidden_size != 0)
+    throw std::runtime_error("bad lm_head_w size");
+  const size_t vocab = lm_head_w.size() / hidden_size;
+
+  const double mean =
+      std::accumulate(hidden.begin(), hidden.end(), 0.0) / hidden_size;
+  double var = 0.0;
+  for (float v : hidden) {
+    const double d = static_cast<double>(v) - mean;
+    var += d * d;
+  }
+  var /= hidden_size;
+  const double inv_std = 1.0 / std::sqrt(var + 1.0e-5);
+
+  std::vector<float> norm(hidden_size);
+  for (size_t i = 0; i < hidden_size; ++i)
+    norm[i] = static_cast<float>((static_cast<double>(hidden[i]) - mean) *
+                                     inv_std * ln_w[i] +
+                                 ln_b[i]);
+
+  TopToken best;
+  for (size_t tok = 0; tok < vocab; ++tok) {
+    const float *w = lm_head_w.data() + tok * hidden_size;
+    double acc = 0.0;
+    for (size_t i = 0; i < hidden_size; ++i)
+      acc += static_cast<double>(norm[i]) * static_cast<double>(w[i]);
+    const float logit = static_cast<float>(acc);
+    if (logit > best.logit) {
+      best.logit = logit;
+      best.token_id = static_cast<int>(tok);
+    }
+  }
+  return best;
 }
 
 void set_b3c0_args(xrt::run &run, NamedBo &hidden_in,
@@ -270,6 +355,8 @@ int main(int argc, char **argv) {
 
     double total_ms = 0.0;
     DiffStats final_stats;
+    int final_token_id = -1;
+    float final_token_logit = 0.0f;
 
     for (int iter = 0; iter < iterations; ++iter) {
       load_file_to_bo(hidden_in, tensor_dir / "hidden_input.bin");
@@ -311,7 +398,10 @@ int main(int argc, char **argv) {
           const auto stats = compare_bf16_bo_to_file(hidden_out, golden);
           std::cout << "iter " << iter << " layer " << layer
                     << " hidden_max_abs=" << stats.max_abs
-                    << " hidden_mean_abs=" << stats.mean_abs << "\n";
+                    << " hidden_mean_abs=" << stats.mean_abs
+                    << " hidden_mean_ref_abs=" << stats.mean_ref_abs
+                    << " hidden_mean_percent_error=" << stats.mean_percent
+                    << "\n";
           final_stats = stats;
         }
 
@@ -321,6 +411,23 @@ int main(int argc, char **argv) {
       const double ms =
           std::chrono::duration<double, std::milli>(t1 - t0).count();
       total_ms += ms;
+
+      const auto hidden = read_bf16_bo_as_float(hidden_out);
+      const auto ln_w = read_bf16_file_as_float(tensor_dir / "final_ln_w.bin", 768);
+      const auto ln_b = read_bf16_file_as_float(tensor_dir / "final_ln_b.bin", 768);
+      const auto lm_head_w =
+          read_bf16_file_as_float(tensor_dir / "lm_head_w.bin", 50257 * 768);
+      const auto token = compute_next_token_cpu(hidden, ln_w, ln_b, lm_head_w);
+      final_token_id = token.token_id;
+      final_token_logit = token.logit;
+
+      const int golden_token =
+          read_first_i32(tensor_dir / "golden_top10_token_ids.bin");
+      std::cout << "iteration " << iter << " fpga_next_token_id="
+                << final_token_id << " fpga_next_token_logit="
+                << final_token_logit << " golden_next_token_id="
+                << golden_token << " top1_match="
+                << (final_token_id == golden_token ? "yes" : "no") << "\n";
       std::cout << "iteration " << iter << " 12layer_latency_ms=" << ms
                 << "\n";
     }
@@ -329,7 +436,11 @@ int main(int argc, char **argv) {
     std::cout << "average_12layer_latency_ms=" << (total_ms / iterations)
               << "\n";
     std::cout << "final_hidden_max_abs=" << final_stats.max_abs
-              << " final_hidden_mean_abs=" << final_stats.mean_abs << "\n";
+              << " final_hidden_mean_abs=" << final_stats.mean_abs
+              << " final_hidden_mean_percent_error="
+              << final_stats.mean_percent << "\n";
+    std::cout << "final_next_token_id=" << final_token_id
+              << " final_next_token_logit=" << final_token_logit << "\n";
     return 0;
   } catch (const std::exception &ex) {
     std::cerr << "error: " << ex.what() << "\n";

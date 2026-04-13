@@ -11,5 +11,7 @@
   "head_dim": 64,
   "max_seq_length": 128,
   "files_are_raw_little_endian": true,
-  "bf16_files_are_uint16_storage": true
+  "bf16_files_are_uint16_storage": true,
+  "golden_next_token_id": 198,
+  "golden_next_token_text": "<token_id:198>"
 }
