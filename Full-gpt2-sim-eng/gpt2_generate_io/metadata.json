@@ -1,0 +1,27 @@
+{
+  "model": "gpt2",
+  "prompt": "The future of AI is",
+  "token_index": 0,
+  "token_id": 464,
+  "token_text": "The",
+  "dtype": "bf16",
+  "num_layers": 12,
+  "hidden_size": 768,
+  "num_heads": 12,
+  "head_dim": 64,
+  "max_seq_length": 128,
+  "files_are_raw_little_endian": true,
+  "bf16_files_are_uint16_storage": true,
+  "golden_next_token_id": 198,
+  "golden_next_token_text": "\n",
+  "prompt_token_ids": [
+    464,
+    2003,
+    286,
+    9552,
+    318
+  ],
+  "prompt_length": 5,
+  "max_new_tokens": 30,
+  "has_token_decoder": true
+}
