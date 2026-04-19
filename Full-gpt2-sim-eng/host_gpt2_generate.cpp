@@ -393,10 +393,6 @@ int main(int argc, char **argv) {
                                                   std::vector<uint8_t>(cache_bytes));
 
     std::vector<int> all_tokens(prompt_ids.begin(), prompt_ids.end());
-    std::vector<int32_t> golden_tokens;
-    if (file_exists(tensor_dir / "golden_greedy_token_ids.bin"))
-      golden_tokens = read_i32_file(tensor_dir / "golden_greedy_token_ids.bin");
-
     std::string output_text;
     for (int id : all_tokens)
       output_text += static_cast<size_t>(id) < decoder.size() ? decoder[id]
@@ -414,7 +410,10 @@ int main(int argc, char **argv) {
       throw std::runtime_error("prompt length + max_new_tokens exceeds 128");
 
     double total_ms = 0.0;
+    double first_token_ms = 0.0;
     int positions_run = 0;
+    int generated_tokens = 0;
+    bool first_token_emitted = false;
     int current_token = all_tokens.front();
     for (int pos = 0; pos < total_positions; ++pos) {
       if (pos < static_cast<int>(prompt_ids.size()))
@@ -474,41 +473,35 @@ int main(int argc, char **argv) {
         const auto next = compute_next_token_cpu(hidden, ln_w, ln_b, lm_head_w);
         current_token = next.token_id;
         all_tokens.push_back(current_token);
+        generated_tokens += 1;
+        if (!first_token_emitted) {
+          first_token_ms = total_ms;
+          first_token_emitted = true;
+        }
         const std::string piece =
             static_cast<size_t>(current_token) < decoder.size()
                 ? decoder[current_token]
                 : "<" + std::to_string(current_token) + ">";
         output_text += piece;
 
-        const size_t token_index = all_tokens.size() - 1;
-        std::cout << "generated_index=" << (token_index - prompt_ids.size())
-                  << " pos=" << pos << " token_id=" << current_token
-                  << " text_piece=" << piece << " logit=" << next.logit;
-        if (token_index < golden_tokens.size()) {
-          std::cout << " golden_token_id=" << golden_tokens[token_index]
-                    << " match="
-                    << (golden_tokens[token_index] == current_token ? "yes"
-                                                                    : "no");
-        }
-        std::cout << " token_latency_ms=" << token_ms << "\n";
-
         if (current_token == 50256) {
-          std::cout << "eos_reached=yes\n";
           break;
         }
-      } else {
-        std::cout << "prefill pos=" << pos << " token_id=" << current_token
-                  << " token_latency_ms=" << token_ms << "\n";
       }
     }
 
-    std::cout << "generated_token_ids:";
-    for (int id : all_tokens)
-      std::cout << " " << id;
-    std::cout << "\n";
-    std::cout << "generated_text:\n" << output_text << "\n";
-    std::cout << "average_position_latency_ms="
-              << (positions_run ? total_ms / positions_run : 0.0) << "\n";
+    const double steady_state_ms =
+        generated_tokens > 1 ? (total_ms - first_token_ms) : 0.0;
+    const double throughput_tok_per_s =
+        steady_state_ms > 0.0 ? (1000.0 * static_cast<double>(generated_tokens - 1) /
+                                 steady_state_ms)
+                              : 0.0;
+
+    std::cout << "time_to_first_token_ms=" << first_token_ms << "\n";
+    std::cout << "throughput_tokens_per_s=" << throughput_tok_per_s << "\n";
+    std::cout << "generated_tokens=" << generated_tokens << "\n";
+    std::cout << "total_sequence_ms=" << total_ms << "\n";
+    std::cout << "final_text:\n" << output_text << "\n";
     return 0;
   } catch (const std::exception &ex) {
     std::cerr << "error: " << ex.what() << "\n";
