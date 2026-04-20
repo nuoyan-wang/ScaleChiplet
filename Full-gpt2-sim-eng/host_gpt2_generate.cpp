@@ -4,6 +4,7 @@
 #include <xrt/xrt_uuid.h>
 
 #include <algorithm>
+#include <array>
 #include <chrono>
 #include <cmath>
 #include <cstdio>
@@ -34,6 +35,23 @@ constexpr size_t kVocab = 50257;
 constexpr size_t F16 = sizeof(uint16_t);
 constexpr size_t I32 = sizeof(int32_t);
 constexpr size_t I1 = sizeof(uint8_t);
+
+constexpr std::array<int32_t, 64> kBuiltInPromptIds = {
+    49985, 1616, 1912, 45619, 389, 27179, 9269, 3660, 6890, 1486, 416,
+    5086, 3716, 3341, 284, 307, 3170, 422, 4833, 16976, 10564, 326,
+    460, 307, 14799, 23392, 290, 788, 40582, 832, 1029, 2866, 6117,
+    15882, 3744, 13688, 6596, 19299, 290, 43865, 2854, 981, 16118, 649,
+    6459, 287, 6946, 24812, 16846, 13357, 290, 1080, 1241, 11812, 1973,
+    10084, 26211, 82, 287, 11823, 14445, 32269, 14492, 12493};
+
+constexpr const char *kBuiltInPromptText =
+    "Chiplet based architectures are reshaping modern hardware design by "
+    "allowing complex systems to be built from smaller specialized dies that "
+    "can be independently optimized and then interconnected through high speed "
+    "links enabling greater flexibility improved yields and scalable "
+    "performance while introducing new challenges in communication latency "
+    "packaging complexity and system level integration across diverse "
+    "workloads in emerging heterogeneous computing environments";
 
 struct NamedBo {
   std::string name;
@@ -438,9 +456,10 @@ int main(int argc, char **argv) {
     if (max_new_tokens <= 0)
       throw std::runtime_error("max_new_tokens must be positive");
 
-    const auto prompt_ids = read_i32_file(tensor_dir / "prompt_token_ids.bin");
+    const std::vector<int32_t> prompt_ids(kBuiltInPromptIds.begin(),
+                                          kBuiltInPromptIds.end());
     if (prompt_ids.empty())
-      throw std::runtime_error("prompt_token_ids.bin is empty");
+      throw std::runtime_error("built-in prompt is empty");
     const auto decoder = load_decoder(tensor_dir / "token_decoder_hex.tsv");
     const auto wte = read_bf16_file_as_float(tensor_dir / "wte.bin", kVocab * kHidden);
     const auto wpe = read_bf16_file_as_float(tensor_dir / "wpe.bin", 1024 * kHidden);
@@ -471,16 +490,13 @@ int main(int argc, char **argv) {
     preload_attention_biases(tensor_dir, device, k0, attention_biases);
 
     std::vector<int> all_tokens(prompt_ids.begin(), prompt_ids.end());
-    std::string output_text;
-    for (int id : all_tokens)
-      output_text += static_cast<size_t>(id) < decoder.size() ? decoder[id]
-                                                              : "<" + std::to_string(id) + ">";
+    std::string output_text = kBuiltInPromptText;
 
     std::cout << "prompt_tokens:";
     for (int id : all_tokens)
       std::cout << " " << id;
     std::cout << "\n";
-    std::cout << "prompt_text: " << output_text << "\n";
+    std::cout << "prompt_text: " << kBuiltInPromptText << "\n";
 
     const int total_positions =
         static_cast<int>(prompt_ids.size()) + max_new_tokens - 1;
