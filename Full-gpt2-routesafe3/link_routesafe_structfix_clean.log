@@ -1,0 +1,405 @@
+CLEAN_LINK=1: moving previous link products aside with suffix .20260419_141619
+Using Vivado synth/impl jobs: 1
+Running link through vpl.config_hw_runs...
+Option Map File Used: '/tools/Xilinx/2025.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-01:29:13
+  **** Start of session at: Sun Apr 19 14:16:20 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/reports/link
+	Log files: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/split3slow55_routesafe_3slr_stream_u55c_2025_2.xclbin.link_summary, at Sun Apr 19 14:16:22 2026
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/reports/link/v++_link_split3slow55_routesafe_3slr_stream_u55c_2025_2_guidance.html', at Sun Apr 19 14:16:22 2026
+INFO: [v++ 60-1321] The specified to_step 'vpl.config_hw_runs' is valid
+INFO: [v++ 60-2261] This v++ link run exits after completing the 'vpl.config_hw_runs' step. To continue, re-run v++ link in the same build directory using the option '--from_step vpl.synth'
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2025.2
+INFO: [v++ 60-1302] Platform 'xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm' has been explicitly enabled for this release.
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u55c_gen3x16_xdma_3_202210_1
+INFO: [v++ 82-31] Launching aie baremetal script for: link
+WARNING: [v++ 82-11894] The baremetal_metadata.cpp file was not created successfully.
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1333] Run 'run_link' will end upon completion of a step 'vpl'
+INFO: [v++ 60-1443] [14:16:31] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/chip0_kernel/c0.xo --xo /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/chip1_kernel/c1.xo --xo /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/chip2_kernel/c2.xo -keep --config /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm --target hw --output_dir /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int --temp_dir /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/run_link
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/chip0_kernel/c0.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/chip1_kernel/c1.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/chip2_kernel/c2.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [14:16:36] build_xd_ip_db started: /tools/Xilinx/2025.2/Vitis/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/hw.hpfm -clkid 0 -ip /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/iprepo/xilinx_com_hls_s3c1_1_0,s3c1 -ip /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/iprepo/xilinx_com_hls_s3c2_1_0,s3c2 -ip /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/iprepo/xilinx_com_hls_s3c0_1_0,s3c0 -o /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [14:16:36] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.33 . Memory (MB): peak = 521.520 ; gain = 0.000 ; free physical = 13945 ; free virtual = 81536
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [14:16:37] cfgen started: /tools/Xilinx/2025.2/Vitis/bin/cfgen  -nk s3c0:1:s3c0_1 -nk s3c1:1:s3c1_1 -nk s3c2:1:s3c2_1 -sc s3c0_1.hidden_orig_to_chip1:s3c1_1.hidden_orig_from_chip0 -sc s3c1_1.hidden_orig_to_chip2:s3c2_1.hidden_orig_from_chip1 -sc s3c0_1.qkv_to_chip1:s3c1_1.qkv_from_chip0 -sc s3c1_1.attn_to_chip2:s3c2_1.attn_from_chip1 -sc s3c1_1.value_to_chip2:s3c2_1.value_from_chip1 -slr s3c0_1:SLR0 -slr s3c1_1:SLR1 -slr s3c2_1:SLR2 -sp s3c0_1.hidden_in:HBM[0] -sp s3c0_1.c0_arg0002:HBM[1] -sp s3c0_1.c0_arg0003:HBM[1] -sp s3c0_1.c0_arg0004:HBM[1] -sp s3c1_1.c1_arg0001:HBM[20] -sp s3c1_1.c1_arg0002:HBM[20] -sp s3c1_1.c1_arg0003:HBM[20] -sp s3c1_1.c1_arg0004:HBM[20] -sp s3c1_1.c1_arg0006:HBM[20] -sp s3c1_1.c1_arg0007:HBM[20] -sp s3c1_1.c1_arg0010:HBM[20] -sp s3c2_1.c2_arg0004:HBM[25] -sp s3c2_1.c2_arg0005:HBM[25] -sp s3c2_1.c2_arg0006:HBM[25] -sp s3c2_1.c2_arg0007:HBM[25] -sp s3c2_1.c2_arg0008:HBM[26] -sp s3c2_1.c2_arg0009:HBM[25] -sp s3c2_1.c2_arg0010:HBM[27] -sp s3c2_1.c2_arg0011:HBM[25] -sp s3c2_1.hidden_out:HBM[29] -dpa_mem_offload false -dpa_aie_mem_offload false -dmclkid 0 -r /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: s3c0, num: 1  {s3c0_1}
+INFO: [CFGEN 83-0]   kernel: s3c1, num: 1  {s3c1_1}
+INFO: [CFGEN 83-0]   kernel: s3c2, num: 1  {s3c2_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: s3c0_1, k_port: hidden_in, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: s3c0_1, k_port: c0_arg0002, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: s3c0_1, k_port: c0_arg0003, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: s3c0_1, k_port: c0_arg0004, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: s3c1_1, k_port: c1_arg0001, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: s3c1_1, k_port: c1_arg0002, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: s3c1_1, k_port: c1_arg0003, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: s3c1_1, k_port: c1_arg0004, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: s3c1_1, k_port: c1_arg0006, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: s3c1_1, k_port: c1_arg0007, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: s3c1_1, k_port: c1_arg0010, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: s3c2_1, k_port: c2_arg0004, sptag: HBM[25]
+INFO: [CFGEN 83-0]   kernel: s3c2_1, k_port: c2_arg0005, sptag: HBM[25]
+INFO: [CFGEN 83-0]   kernel: s3c2_1, k_port: c2_arg0006, sptag: HBM[25]
+INFO: [CFGEN 83-0]   kernel: s3c2_1, k_port: c2_arg0007, sptag: HBM[25]
+INFO: [CFGEN 83-0]   kernel: s3c2_1, k_port: c2_arg0008, sptag: HBM[26]
+INFO: [CFGEN 83-0]   kernel: s3c2_1, k_port: c2_arg0009, sptag: HBM[25]
+INFO: [CFGEN 83-0]   kernel: s3c2_1, k_port: c2_arg0010, sptag: HBM[27]
+INFO: [CFGEN 83-0]   kernel: s3c2_1, k_port: c2_arg0011, sptag: HBM[25]
+INFO: [CFGEN 83-0]   kernel: s3c2_1, k_port: hidden_out, sptag: HBM[29]
+INFO: [CFGEN 83-0] Stream Specs: 
+INFO: [CFGEN 83-0]   s3c0_1.hidden_orig_to_chip1 => s3c1_1.hidden_orig_from_chip0
+INFO: [CFGEN 83-0]   s3c1_1.hidden_orig_to_chip2 => s3c2_1.hidden_orig_from_chip1
+INFO: [CFGEN 83-0]   s3c0_1.qkv_to_chip1 => s3c1_1.qkv_from_chip0
+INFO: [CFGEN 83-0]   s3c1_1.attn_to_chip2 => s3c2_1.attn_from_chip1
+INFO: [CFGEN 83-0]   s3c1_1.value_to_chip2 => s3c2_1.value_from_chip1
+INFO: [CFGEN 83-0] SLR Specs: 
+INFO: [CFGEN 83-0]   instance: s3c0_1, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: s3c1_1, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: s3c2_1, SLR: SLR2
+INFO: [SYSTEM_LINK 82-37] [14:16:41] cfgen finished successfully
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 521.520 ; gain = 0.000 ; free physical = 13949 ; free virtual = 81538
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [14:16:41] cf2bd started: /tools/Xilinx/2025.2/Vitis/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/_sysl/.xsd --temp_dir /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link --output_dir /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int --target_bd ulp.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [14:16:43] cf2bd finished successfully
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 521.520 ; gain = 0.000 ; free physical = 13946 ; free virtual = 81539
+INFO: [v++ 60-1441] [14:16:43] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 528.965 ; gain = 0.000 ; free physical = 14062 ; free virtual = 81654
+INFO: [v++ 60-1443] [14:16:43] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/sdsl.dat -rtd /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/cf2sw.rtd -nofilter /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/cf2sw_full.rtd -xclbin /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/xclbin_orig.xml -o /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/run_link
+INFO: [v++ 60-1441] [14:16:45] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 528.965 ; gain = 0.000 ; free physical = 14053 ; free virtual = 81649
+INFO: [v++ 60-1443] [14:16:46] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/run_link
+INFO: [v++ 60-1441] [14:16:46] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.19 . Memory (MB): peak = 528.965 ; gain = 0.000 ; free physical = 14030 ; free virtual = 81626
+INFO: [v++ 60-1443] [14:16:46] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm -s --remote_ip_cache /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/.ipcache --output_dir /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int --log_dir /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/logs/link --report_dir /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/reports/link --config /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/vplConfig.ini -k /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link --no-info --iprepo /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/xo/ip_repo/xilinx_com_hls_s3c1_1_0 --iprepo /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/xo/ip_repo/xilinx_com_hls_s3c2_1_0 --iprepo /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/xo/ip_repo/xilinx_com_hls_s3c0_1_0 --to_step config_hw_runs --messageDb /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/run_link/vpl.pb /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/run_link
+
+****** vpl v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-01:29:13
+  **** Start of session at: Sun Apr 19 14:16:47 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2025.2
+INFO: [VPL 60-423]   Target device: xilinx_u55c_gen3x16_xdma_3_202210_1
+INFO: [VPL 60-1321] The specified to_step 'config_hw_runs' is valid
+INFO: [VPL 60-2261] This v++ link run exits after completing the 'config_hw_runs' step. To continue, re-run v++ link in the same build directory using the option '--from_step synth'
+INFO: [VPL 60-1032] Extracting hardware platform to /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/vivado/vpl/.local/hw_platform
+[14:16:54] Run vpl: Step create_project: Started
+Creating Vivado project.
+[14:16:56] Run vpl: Step create_project: Completed
+[14:16:56] Run vpl: Step create_bd: Started
+[14:17:18] Run vpl: Step create_bd: Completed
+[14:17:18] Run vpl: Step update_bd: Started
+[14:17:19] Run vpl: Step update_bd: Completed
+[14:17:19] Run vpl: Step generate_target: Started
+[14:18:14] Run vpl: Step generate_target: Completed
+[14:18:14] Run vpl: Step config_hw_runs: Started
+[14:18:26] Run vpl: Step config_hw_runs: Completed
+[14:18:27] Run vpl: FINISHED. Run Status: Not started synth
+WARNING: [VPL 60-1142] Unable to read data from '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/vivado/vpl/output/generated_reports.log', generated reports will not be copied.
+INFO: [v++ 60-1441] [14:18:27] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:00:03 ; elapsed = 00:01:44 . Memory (MB): peak = 528.965 ; gain = 0.000 ; free physical = 9255 ; free virtual = 78816
+WARNING: [v++ 60-2337] Parameter compiler.enableSlrComputeUnitDrc was set to true, but no compute unit information could be obtained.
+These checks are only supported in a complete build.
+Check POST-VPL, containing 1 checks, has run: 0 errors
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/reports/link/v++_link_split3slow55_routesafe_3slr_stream_u55c_2025_2_guidance.html
+	Vivado Log: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/logs/link/vivado.log
+	Steps Log File: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the Vitis Unified IDE to visualize and navigate the reports. Run the following command. 
+    vitis -a/ --analyze /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/split3slow55_routesafe_3slr_stream_u55c_2025_2.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 2m 6s
+INFO: [v++ 60-1653] Closing dispatch client.
+Using working HDL:
+84a63bd868e1e7b4c3b5586fc7e269fc9b2973082ad2e29e2c77aa13268769b3  /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/clk_metadata_adapter_v1_0/hdl/clk_metadata_adapter_v1_0_vl_rfs.v
+Applying clk metadata adapter HDL patch workaround for Vitis 2025.2 generated link files.
+Patching 2 generated clk_metadata_adapter HDL file(s)...
+  /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/clk_metadata_adapter_v1_0/hdl/clk_metadata_adapter_v1_0_vl_rfs.v
+  /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/d73f/hdl/clk_metadata_adapter_v1_0_vl_rfs.v
+Resuming link from vpl.synth...
+Option Map File Used: '/tools/Xilinx/2025.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-01:29:13
+  **** Start of session at: Sun Apr 19 14:18:38 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/reports/link
+	Log files: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/split3slow55_routesafe_3slr_stream_u55c_2025_2.xclbin.link_summary, at Sun Apr 19 14:18:41 2026
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/reports/link/v++_link_split3slow55_routesafe_3slr_stream_u55c_2025_2_guidance.html', at Sun Apr 19 14:18:41 2026
+INFO: [v++ 60-1321] The specified from_step 'vpl.synth' is valid
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2025.2
+INFO: [v++ 60-1302] Platform 'xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm' has been explicitly enabled for this release.
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u55c_gen3x16_xdma_3_202210_1
+INFO: [v++ 82-31] Launching aie baremetal script for: link
+WARNING: [v++ 82-11894] The baremetal_metadata.cpp file was not created successfully.
+INFO: [v++ 60-1456] Step 'vpl' is partially done 
+INFO: [v++ 60-1323] Run 'run_link' is partially done, reset the run from step 'vpl' as specified by --from_step option
+INFO: [v++ 60-1332] Run 'run_link' status: Not started vpl
+INFO: [v++ 60-1443] [14:18:43] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f /opt/xilinx/platforms/xilinx_u55c_gen3x16_xdma_3_202210_1/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm -s --remote_ip_cache /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/.ipcache --output_dir /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int --log_dir /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/logs/link --report_dir /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/reports/link --config /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/vplConfig.ini -k /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link --no-info --iprepo /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/xo/ip_repo/xilinx_com_hls_s3c2_1_0 --iprepo /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/xo/ip_repo/xilinx_com_hls_s3c1_1_0 --iprepo /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/xo/ip_repo/xilinx_com_hls_s3c0_1_0 --from_step synth --messageDb /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/run_link/vpl.pb /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/run_link
+
+****** vpl v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-01:29:13
+  **** Start of session at: Sun Apr 19 14:18:43 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2025.2
+INFO: [VPL 60-423]   Target device: xilinx_u55c_gen3x16_xdma_3_202210_1
+INFO: [VPL 60-1321] The specified from_step 'synth' is valid
+INFO: [VPL 60-1032] Extracting hardware platform to /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/vivado/vpl/.local/hw_platform
+INFO: [VPL 60-1323] Run 'vpl' is partially done, reset the run from step 'synth' as specified by --from_step option
+[14:18:50] Run vpl: Step synth: Started
+Opening Vivado project.
+[14:58:30] Run vpl: Step synth: Completed
+[14:58:30] Run vpl: Step impl: Started
+[15:09:47] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 00h 52m 22s 
+
+[15:09:47] Starting logic optimization..
+[15:10:17] Phase 1 Initialization
+[15:10:17] Phase 1.1 Core Generation And Design Setup
+[15:10:46] Phase 1.2 Setup Constraints And Sort Netlist
+[15:10:46] Phase 2 Timer Update And Timing Data Collection
+[15:10:46] Phase 2.1 Detect if minReqCache needed
+[15:10:46] Phase 2.2 Timer Update
+[15:11:15] Phase 2.3 Timing Data Collection
+[15:11:15] Phase 3 Retarget
+[15:11:45] Phase 4 Constant propagation
+[15:11:45] Phase 5 Sweep
+[15:13:43] Phase 6 BUFG optimization
+[15:13:43] Phase 7 Shift Register Optimization
+[15:13:43] Phase 8 Post Processing Netlist
+[15:14:13] Phase 9 Finalization
+[15:14:13] Phase 9.1 Finalizing Design Cores and Updating Shapes
+[15:14:13] Phase 9.2 Verifying Netlist Connectivity
+[15:15:12] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 05m 32s 
+
+[15:15:12] Starting logic placement..
+[15:15:42] Phase 1 Placer Initialization
+[15:15:42] Phase 1.1 Placer Initialization Netlist Sorting
+[15:19:37] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[15:20:07] Phase 1.3 Build Placer Netlist Model
+[15:23:04] Phase 1.4 Constrain Clocks/Macros
+[15:23:33] Phase 2 Global Placement
+[15:23:33] Phase 2.1 Floorplanning
+[15:24:32] Phase 2.1.1 Partition Driven Placement
+[15:24:32] Phase 2.1.1.1 PBP: Partition Driven Placement
+[15:25:31] Phase 2.1.1.2 PBP: Clock Region Placement
+[15:26:01] Phase 2.1.1.3 PBP: Discrete Incremental
+[15:26:30] Phase 2.1.1.4 PBP: Compute Congestion
+[15:26:30] Phase 2.1.1.5 PBP: Macro Placement
+[15:27:00] Phase 2.1.1.6 PBP: UpdateTiming
+[15:27:00] Phase 2.1.1.7 PBP: Add part constraints
+[15:27:29] Phase 2.2 Physical Synthesis After Floorplan
+[15:27:29] Phase 2.3 Update Timing before SLR Path Opt
+[15:27:29] Phase 2.4 Post-Processing in Floorplanning
+[15:27:29] Phase 2.5 Global Place Phase1
+[15:41:49] Phase 2.6 Global Place Phase2
+[15:41:49] Phase 2.6.1 UpdateTiming Before Physical Synthesis
+[15:42:18] Phase 2.6.2 Physical Synthesis In Placer
+[15:46:43] Phase 3 Detail Placement
+[15:47:13] Phase 3.1 Commit Multi Column Macros
+[15:47:13] Phase 3.2 Commit Most Macros & LUTRAMs
+[15:50:10] Phase 3.3 Small Shape DP
+[15:50:10] Phase 3.3.1 Small Shape Clustering
+[15:50:10] Phase 3.3.2 Slice Area Swap
+[15:50:10] Phase 3.3.2.1 Slice Area Swap Initial
+[15:52:08] Phase 3.4 Place Remaining
+[15:52:37] Phase 3.5 Re-assign LUT pins
+[15:53:07] Phase 3.6 Pipeline Register Optimization
+[15:53:36] Phase 3.7 Fast Optimization
+[15:55:35] Phase 4 Post Placement Optimization and Clean-Up
+[15:55:35] Phase 4.1 Post Commit Optimization
+[15:57:33] Phase 4.1.1 Post Placement Optimization
+[15:57:33] Phase 4.1.1.1 BUFG Insertion
+[15:57:33] Phase 1 Physical Synthesis Initialization
+[15:58:02] Phase 4.1.1.2 BUFG Replication
+[15:58:02] Phase 4.1.1.3 Post Placement Timing Optimization
+[16:01:58] Phase 4.1.1.4 Replication
+[16:03:26] Phase 4.2 Post Placement Cleanup
+[16:03:26] Phase 4.3 Placer Reporting
+[16:03:26] Phase 4.3.1 Print Estimated Congestion
+[16:03:26] Phase 4.4 Final Placement Cleanup
+[16:17:16] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 01h 03m 48s 
+
+[16:17:16] Starting logic routing..
+[16:17:16] Phase 1 Build RT Design
+[16:19:43] Phase 2 Router Initialization
+[16:19:43] Phase 2.1 Fix Topology Constraints
+[16:19:43] Phase 2.2 Pre Route Cleanup
+[16:20:12] Phase 2.3 Global Clock Net Routing
+[16:20:42] Phase 2.4 Update Timing
+[16:23:10] Phase 2.5 Update Timing for Bus Skew
+[16:23:10] Phase 2.5.1 Update Timing
+[16:24:09] Phase 2.6 Soft Constraint Pins - Fast Budgeting
+[16:24:09] Phase 3 Global Routing
+[16:24:09] Phase 3.1 SLL Assignment
+[16:24:38] Phase 4 Initial Routing
+[16:24:38] Phase 4.1 Initial Net Routing Pass
+[16:25:37] Phase 5 Rip-up And Reroute
+[16:25:37] Phase 5.1 Global Iteration 0
+[16:34:28] Phase 5.2 Global Iteration 1
+[16:36:25] Phase 5.3 Global Iteration 2
+[16:38:24] Phase 5.4 Global Iteration 3
+[16:39:52] Phase 5.5 Global Iteration 4
+[16:41:50] Phase 6 Delay and Skew Optimization
+[16:41:50] Phase 6.1 Delay CleanUp
+[16:42:49] Phase 6.2 Clock Skew Optimization
+[16:42:49] Phase 7 Post Hold Fix
+[16:42:49] Phase 7.1 Hold Fix Iter
+[16:43:48] Phase 8 Leaf Clock Prog Delay Opt
+[16:44:18] Phase 8.1 Optimize Skews
+[16:44:18] Phase 8.1.1 Leaf ClockOpt Init
+[16:45:17] Phase 8.2 Post SkewOpt Delay Cleanup
+[16:45:17] Phase 8.2.1 Delay CleanUp
+[16:46:16] Phase 8.3 Post SkewOpt Hold Fix
+[16:46:16] Phase 8.3.1 Hold Fix Iter
+[16:48:15] Phase 9 Route finalize
+[16:48:15] Phase 10 Verifying routed nets
+[16:48:15] Phase 11 Depositing Routes
+[16:48:45] Phase 12 Resolve XTalk
+[16:49:14] Phase 13 Post Process Routing
+[16:49:14] Phase 14 Post Router Timing
+[16:50:42] Phase 15 Physical Synthesis in Router
+[16:50:42] Phase 15.1 Physical Synthesis Initialization
+[16:51:12] Phase 15.2 Critical Path Optimization
+[16:52:10] Phase 16 Post-Route Event Processing
+[16:54:08] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 00h 37m 59s 
+
+[16:54:08] Starting bitstream generation..
+[17:07:25] Creating bitmap...
+[17:11:51] Writing bitstream ./level0_i_ulp_my_rm_partial.bit...
+[17:11:51] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 18m 14s 
+Check VPL, containing 10 checks, has run: 0 errors, 2 warning violations
+WARNING: [AUTO-FREQ-SCALING-04] One or more timing paths failed timing requirements. The kernel clock ulp_ucs/aclk_kernel_00 has an original frequency equal to 300.000000 MHz. The frequency has been automatically changed to 124.6 MHz to enable proper functionality. The clock Id is 0.
+WARNING: [AUTO-FREQ-SCALING-07] One or more timing paths failed timing requirements. The system clock hbm_aclk has an original frequency equal to 450 MHz. The frequency has been automatically changed to 414.7 MHz to enable proper functionality.
+[17:12:22] Run vpl: Step impl: Completed
+[17:12:22] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [17:12:23] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:01:06 ; elapsed = 02:58:33 . Memory (MB): peak = 528.965 ; gain = 0.000 ; free physical = 16882 ; free virtual = 80642
+INFO: [v++ 60-1443] [17:12:23] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/run_link
+INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_01' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_00' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'hbm_aclk' (clock ID '') is being mapped to clock name 'hbm_aclk' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): System (SYSTEM) clock: hbm_aclk = 414, Kernel (KERNEL) clock: ulp_ucs/aclk_kernel_01 = 500, Kernel (DATA) clock: ulp_ucs/aclk_kernel_00 = 124
+INFO: [v++ 60-1453] Command Line: cf2sw -a /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/address_map.xml -sdsl /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/sdsl.dat -xclbin /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/xclbin_orig.xml -rtd /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/split3slow55_routesafe_3slr_stream_u55c_2025_2.rtd -o /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/split3slow55_routesafe_3slr_stream_u55c_2025_2.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+INFO: [v++ 60-1441] [17:12:26] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 528.965 ; gain = 0.000 ; free physical = 16756 ; free virtual = 80581
+INFO: [v++ 60-1443] [17:12:26] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section BITSTREAM:RAW:/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/split3slow55_routesafe_3slr_stream_u55c_2025_2.rtd --append-section :JSON:/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/split3slow55_routesafe_3slr_stream_u55c_2025_2_xml.rtd --add-section BUILD_METADATA:JSON:/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/split3slow55_routesafe_3slr_stream_u55c_2025_2_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/split3slow55_routesafe_3slr_stream_u55c_2025_2.xml --add-section SYSTEM_METADATA:RAW:/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u55c_gen3x16_xdma_3_202210_1 --output /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/split3slow55_routesafe_3slr_stream_u55c_2025_2.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/run_link
+XRT Build Version: 2.19.0 (Vitis)
+       Build Date: 2025-02-07 10:52:04
+          Hash ID: f02de266f785111094b02d32a9012bd0da3abd58
+Creating a default 'in-memory' xclbin image.
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 67796550 bytes
+Format : RAW
+File   : '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/partial.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 410 bytes
+Format : JSON
+File   : '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/split3slow55_routesafe_3slr_stream_u55c_2025_2_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 11495 bytes
+Format : JSON
+File   : '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/split3slow55_routesafe_3slr_stream_u55c_2025_2_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 12684 bytes
+Format : RAW
+File   : '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/split3slow55_routesafe_3slr_stream_u55c_2025_2.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 1381 bytes
+Format : RAW
+File   : '/home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'PARTITION_METADATA'(20) was successfully appended to.
+Format : JSON
+File   : 'partition_metadata'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (67866819 bytes) to the output file: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/split3slow55_routesafe_3slr_stream_u55c_2025_2.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [17:12:26] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.35 . Memory (MB): peak = 528.965 ; gain = 0.000 ; free physical = 16669 ; free virtual = 80565
+INFO: [v++ 60-1443] [17:12:26] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/split3slow55_routesafe_3slr_stream_u55c_2025_2.xclbin.info --input /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/split3slow55_routesafe_3slr_stream_u55c_2025_2.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/link/run_link
+INFO: [v++ 60-1441] [17:12:27] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.56 . Memory (MB): peak = 528.965 ; gain = 0.000 ; free physical = 16656 ; free virtual = 80560
+INFO: [v++ 60-2331] SLR0 was specfied for compute unit s3c0_1, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR1 was specfied for compute unit s3c1_1, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR2 was specfied for compute unit s3c2_1, and verified as such in implementation.
+Check POST-VPL, containing 1 checks, has run: 0 errors
+INFO: [v++ 60-586] Created /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/split3slow55_routesafe_3slr_stream_u55c_2025_2.ltx
+INFO: [v++ 60-586] Created /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/split3slow55_routesafe_3slr_stream_u55c_2025_2.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/reports/link/v++_link_split3slow55_routesafe_3slr_stream_u55c_2025_2_guidance.html
+	Timing Report: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt
+	Vivado Log: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/logs/link/vivado.log
+	Steps Log File: /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/_x/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the Vitis Unified IDE to visualize and navigate the reports. Run the following command. 
+    vitis -a/ --analyze /home/nu/ChenLab/tensor-mlir/examples/gpt2/vitis_split3slow55_routesafe_3slr_stream_xo/saved_split3slow55_u55c_2025_2/split3slow55_routesafe_3slr_stream_u55c_2025_2.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 2h 53m 48s
+INFO: [v++ 60-1653] Closing dispatch client.
